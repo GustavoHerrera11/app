@@ -1,0 +1,80 @@
+/* Empty. Add your own CSS if you like */
+.buscar{
+	background-image:url("../img/paisaje.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+	display:block;
+}
+
+.whait{
+	color:white;
+}
+
+.pokeform{
+	background-color: rgba(0, 40, 32, 0.6);
+	padding: 45px;
+  	margin: 8px 0;
+  	border-radius: 8px;
+}
+.cuadro{
+	border:5px solid orange;
+	color: black;
+	font-family: broadway;
+	font-size:30px;
+	text-align: center;
+	opacity: red;
+	background-color: skyblue;
+	padding: 1px;
+	margin: 7px;
+}
+.{
+	box-shadow: 5px -9px 3px #e6f0b6;
+}
+p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+h1 {
+	text-align: center;
+	font-family: broadway;
+	font-size: 80px;
+	color:white;
+	background-color:;
+	padding: 0 !important;
+}
+.im {
+	background-color: gray;
+	border:2px solid black;
+}
+.jp {
+	background-color: #684949;
+	border: 1px solid #684949;
+}
+.spd {
+	padding: 0 !important;
+}
+.a {
+	border:1px solid black;
+}
+.cc {
+	text-align: center;
+	border: 1px solid black;
+	background-color: #6384b3;
+	font-family: algerian;
+	font-size:30px;
+	color: #FFFFFF;
+}
+.ww {
+	color: #FFFFFF;
+}
+.imm {
+	text-align: center;
+	margin: auto;
+	display: block;
+}
