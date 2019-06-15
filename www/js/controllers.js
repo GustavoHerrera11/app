@@ -42,27 +42,26 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($rootScope,$scope,$http) {
-  var pokemon = angular.module("pokemon",[])
-  $scope.pokedexB = [];
-  for (var i = 0; i <= 200; i++) {
-    $http({
-    method: "GET",
-    url: "https://pokeapi.co/api/v2/pokemon/"+i
-  }).then(function callbackSuccess(y){
-    $scope.pokedexB.push(y);
-  })
-}
+  $rootScope.pokedexB;
 })
 
 .controller('SearchCtrl', function($rootScope,$scope,$http) {
   var pokemon = angular.module("pokemon",[])
-  $scope.pokedexB = [];
-  for (var i = 0; i <= 200; i++) {
+  $rootScope.pokedexB = [];
+  for (var i = 0; i <= 50; i++) {
     $http({
-    method: "GET",
-    url: "https://pokeapi.co/api/v2/pokemon/"+i
-  }).then(function callbackSuccess(y){
-    $scope.pokedexB.push(y);
-  })
-}
+      method: "GET",
+      url: "https://pokeapi.co/api/v2/pokemon/"+i
+    }).then(function callbackSuccess(y){
+      $rootScope.pokedexB.push(y);
+        if (y.data.id < 10) {
+          //01010010 01101111 01101100 01101101 01100001 01101110 00100000 01010010 01100101 01110001 01110101 01100101 01101110 01100001
+          y.data.sprites.front_default = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/00"+y.data.id+".png";
+        } else if (y.data.id >=10 && y.data.id <100) {
+          y.data.sprites.front_default = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/0"+y.data.id+".png";
+        } else if (y.data.id >=100) {
+          y.data.sprites.front_default = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/"+y.data.id+".png";
+        }
+    })
+  }
 })
